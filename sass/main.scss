@@ -1,6 +1,9 @@
 // utils
 @import "./utils/variables";
+@import "./utils/placeholder";
 @import "./utils/hidden";
+
+
 
 // bace 
 @import "./bace/reset";
@@ -16,8 +19,9 @@
 @import "./layout/photo-report-section";
 @import "./layout/foto-team";
 @import "./layout/permanent-clientss";
-@import "./layout/footer";
 @import "./layout/title-buttonss";
+@import "./layout/footer";
+
 
 
 //components

@@ -6,19 +6,19 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   z-index: 1;
-  transition:250ms var(--timing-function)
+  transition:250ms $timing-function;
 }
 
 .backdrop.is-hidden{
   opacity: 0;
   pointer-events: none;
-  transition: 250ms var(--timing-function)
+  transition: 250ms $timing-function;
 }
 
 .modal {
   min-height: 581px;
   width: 528px;
-  background:var(--color-white);
+  background: $color-white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
   0px 1px 1px rgba(0, 0, 0, 0.14),
   0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -28,7 +28,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius:4px;
-  transition: 250ms var(--timing-function);
+  transition: 250ms $timing-function;
 }
 
 .modal-logo {
@@ -49,8 +49,8 @@
 
 
 .logo-krest:hover{
-fill: var(--color-accent);
-transition: 250ms var(--color-accent) ;
+fill: $color-accent;
+transition: 250ms $color-accent;
 }
 
 
@@ -58,7 +58,7 @@ transition: 250ms var(--color-accent) ;
 font-size: 12 px;
 line-height: 14px;
 letter-spacing: 0.01em;
-color:var(--second-color);
+color: $second-color;
 width: 40px;
 }
 
@@ -75,12 +75,9 @@ width: 40px;
 position: relative;
 }
 
-
 .form-position{
-  
   margin-left: 0px;
   margin-left: 0px;
-  
 }
 
 .form-text-header{
@@ -89,9 +86,8 @@ position: relative;
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
-  color:var(--color-main);
+  color: $color-main;
   margin-bottom: 12px;
- 
 }
 
  .form-field{
@@ -111,7 +107,7 @@ padding:4px;
 font-size: 14px;
 line-height: 24px;
 letter-spacing: 0.03em;
-color:var(--second-color);
+color: $second-color;
 display: flex; 
 align-items: center;
 margin-top: 25px;
@@ -120,32 +116,39 @@ margin-top: 25px;
 .check-item {
   width: 16px;
   height: 15px;
-  border: 2px solid var(--color-main) ;
+  border: 2px solid $color-main;
   border-radius: 2px;
   margin-right: 8px;
   /* позиционирование. svg */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // подключен шаблон 
+  @extend %position-wrap;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .check-icon{
-   fill: var(--color-white);
+   fill: $color-white;
 }
 
- .modal-check:checked+.check-text .check-item {
-  background-color:var(--color-accent);
-  border: none;
- 
+
+.modal-check:checked+.check-text{
+
+   .check-item {
+     background-color: $color-accent;
+     border: none;
+   }
+   
+   .modal-check {
+     visibility: hidden;
+   }
+
 }
-.modal-check{
-  visibility: hidden;
-} 
 
 
 .text-info{
   text-decoration:underline;
-  color:var(--color-accent);
+  color: $color-accent;
 }
 
 .form-input{
@@ -158,16 +161,18 @@ margin-top: 25px;
   cursor: pointer;
   padding-left: 40px;
   margin-bottom: 10px;
+  transition: 250ms $timing-function;
 
-  transition: 250ms var(--timing-function) ;
+  &:focus,
+  &:hover {
+    border-color: $color-accent;
+    outline: none;
+  }
+
 }
-.form-input:focus,
-.form-input:hover{
-  border-color: var(--color-accent);
-  outline: none;
-} 
+ 
 .form-input:hover+.logo-register{
-  fill:var(--color-accent);
+  fill: $color-accent;
 }
 
 
@@ -175,29 +180,29 @@ margin-top: 25px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-
   font-size: 16px;
-
   resize: none;
   cursor: pointer;
   width: 448px;
   height: 120px;
-
   outline: none;
-  transition: 250ms var(--timing-function);
-}
-.form-input-text:hover {
-  border-color:var(--color-accent);
+  transition: 250ms $timing-function;
+
+  &:hover {
+    border-color: $color-accent;
+  }
+  
+  &::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    padding: 12px 16px;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
 }
 
 
-.form-input-text::placeholder{
- font-size: 12px;
- line-height: 14px;
- letter-spacing: 0.01em;
- padding:12px 16px;
- color: rgba(117, 117, 117, 0.5); 
-}
 
 .button-form{
   height: 50px;
@@ -206,27 +211,30 @@ margin-top: 25px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   letter-spacing: 0.06em;
-  color:var(--color-white);
+  color: $color-white;
   border: none;
   margin-bottom: 40px;
-  transition: 2500ms var(--timing-function);
+  transition: 2500ms $timing-function;
+  
+  &:hover,
+  &:focus {
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: 250ms $timing-function;
+  }
+
 }
+
+
 .button-form-child {
   display:block;
   margin:0 auto;
 }
+
 .button-indent{
   padding-top: 30px;
 }
 
 
-
-.button-form:hover,
-.button-form:focus
-{
-  background: #188CE8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  transition: 250ms var(--timing-function);
-}
 

@@ -1,12 +1,11 @@
 .first-section {
-
   max-width: 1600px;
   flex-direction: column;
   min-height: 600px;
   justify-content: center;
   align-items: center;
   padding: 200px 0;
-  background: var(--color-footer);
+  background: $color-footer;
   margin: 0px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg);
   margin: 0 auto;
@@ -15,22 +14,19 @@
 .text-title {
   max-width: 696px;
   margin: 0 auto 30px;
-
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.2;
-
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  color: var(--color-white);
+  color: $color-white;
 }
 
 .button {
   display: inline-block;
-  background-color: var(--color-accent);
+  background-color: $color-accent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0px;
@@ -42,10 +38,8 @@
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.06em;
-  color: var(--color-white);
+  color: $color-white;
 }
-
-
 
 .button-position {
   text-align: center;

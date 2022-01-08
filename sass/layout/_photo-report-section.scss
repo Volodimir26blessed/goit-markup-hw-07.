@@ -3,35 +3,33 @@
   font-weight: bold;
   font-size: 36px;
   line-height: 1.1;
-
   letter-spacing: 0.03em;
-
-  color: var(--color-main);
+  color: $color-main;
   margin-bottom: 50px;
   text-align: center;
 }
+
 .activity {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
 }
 
-
-
 .img-position {
   position: relative;
+
+    &::before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    height: 70px;
+    width: 100%;
+    bottom: 0%;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
 }
 
-.img-position::before {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  height: 70px;
-  width: 100%;
-  bottom: 0%;
-  background-color: rgba(47, 48, 58, 0.8);
-
-}
 
 .foto {
   display: flex;
@@ -46,7 +44,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-white);
+  color: $color-white;
 }
 
 .text-position {

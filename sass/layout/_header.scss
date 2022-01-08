@@ -23,31 +23,18 @@
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  color: var(--color-accent);
+  color: $color-accent;
 }
 
 .logo-offset {
   margin-right: 93px;
 }
 
-.reset-decoration {
-  text-decoration: none;
-}
 
 .logo-color {
-  color: var(--color-main);
+  color: $color-main;
 }
 
-
-
-.reset-point {
-  align-items: center;
-  display: flex;
-}
-/*скидывает точки со списков li*/
-.reset-point {
-  list-style: none;
-}
 
 .list-andr:not(:last-child) {
   margin-right: 50px;
@@ -55,46 +42,43 @@
 
 /* навигация */
 .list-link {
-
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--color-main);
-
   position: relative;
-  transition: 250ms var(--timing-function);
+  transition: 250ms $timing-function;
+  
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+
 }
 
-
-
-.list-link:hover,
-.list-link:focus {
-  color: var(--color-accent);
-}
 
 
 .active {
-  color: var(--color-accent);
+  color: $color-accent;
   position: relative;
-}
 
-.active::after {
-  content: '';
-  display: block;
-
-  position: absolute;
-
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-
-  background-color: var(--color-accent);
-  left: 0px;
-  bottom: -34px;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $color-accent;
+    left: 0px;
+    bottom: -34px;
 
 }
+
+}
+
 // слизируем тол и почту 
 .mail-tel {
   display: flex;
@@ -117,15 +101,17 @@
   line-height: 1.1;
   letter-spacing: 0.02em;
 
-  color: var(--second-color);
+  color: $second-color;
   justify-content: center;
-  transition: 250ms var(--timing-function);
+  transition: 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+  color: $color-accent;
 }
 
-.mail:hover,
-.mail:focus {
-  color: var(--color-accent);
 }
+
 
 /* ховер и фокус силлка и лого*/
 .pozition-logo {
@@ -134,23 +120,27 @@
   fill: currentColor;
 }
 
+
 .tel {
   display: flex;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
-  color: var(--second-color);
-  transition: 250ms var(--timing-function);
+  color: $second-color;
+  transition: 250ms $timing-function;
+
+  /* ховер и фокус силлка и лого end. */
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+
 }
 
-.tel:hover,
-.tel:focus {
-  color: var(--color-accent);
 
-}
 
-/* ховер и фокус силлка и лого end. */
+
   
 
 

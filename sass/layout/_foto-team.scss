@@ -1,11 +1,9 @@
 .for-section {
   background-color: #eee;
-  ;
-  background-color: var(--for-section);
+  background-color: $for-section;
 }
 
 .team-item {
-
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -24,7 +22,7 @@
   font-size: 16px;
   line-height: 1.1;
   letter-spacing: 0.03em;
-  color: var(--color-main);
+  color: $color-main;
   cursor: pointer;
 
 }
@@ -35,19 +33,21 @@
   font-size: 16px;
   line-height: 1.1;
   letter-spacing: 0.03em;
-  color: var(--second-color);
+  color: $second-color;
   cursor: pointer;
   margin-bottom: 16px;
 }
 
-
 .social-list-item {
   width: 44px;
   height: 44px;
+ 
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
 }
-.social-list-item:not(:last-child) {
-  margin-right: 10px;
-}
+
 
 
 .social-list-link {
@@ -58,20 +58,25 @@
   align-items: center;
   background-color: transparent;
   border-radius: 50%;
-  transition: 250ms var(--timing-function)
-}
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: var(--color-accent);
+  transition: 250ms $timing-function;
+  
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+
 }
 
 
 .social-list-icon {
-  fill: var(--color-icon);
-}
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-  fill: var(--color-white);
+  fill: $color-icon;
+   
+  .social-list-link:hover &,
+  .social-list-link:focus & {
+    fill: $color-white;
+  }
+
 }
 
 
+  
