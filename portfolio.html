@@ -33,34 +33,35 @@
   <!--Шапка пр-->
   <header class="sectin-start">
 
-    <div class="container header-container ">
+    <div class=" sectin-start__header-container container ">
+      <!--это все навигация ведет к другим страницам или к формам регистрации (кнопки в nav не попадают) -->
+      <nav class="sectin-start__nav nav">
 
-      <nav class="nav">
-        <a class="logo logo-offset reset-decoration" href="http://127.0.0.1:1236/index.html">Web<span
-            class="logo-color">Studio</span></a>
+        <a class="nav__logo logo logo-offset reset-decoration " href="http://127.0.0.1:1236/index.html">Web<span
+            class="nav__logo-color ">Studio</span></a>
 
 
-        <ul class="list reset-point">
-          <li class="list-item list-andr "><a class="list-link animation-heder  reset-decoration"
-              href="index.html">Студия</a>
+        <ul class="sectin-start__list reset-point">
+          <li class="sectin-start__list-andr"><a class="sectin-start__list-link  reset-decoration "
+              href="./index.html">Студия</a>
           </li>
 
-          <li class="list-item list-andr "><a class="list-link animation-heder  reset-decoration active  "
+          <li class="sectin-start__list-andr "><a
+              class="sectin-start__list-link sectin-start__list-link--active  reset-decoration"
               href="./portfolio.html">Портфолио</a>
           </li>
 
-          <li class="list-item list-andr "><a class="list-link  reset-decoration" href="#">Контакты</a>
+          <li class="sectin-start__list-andr "><a class="sectin-start__list-link reset-decoration" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
 
 
-
       <div class="mail-tel">
 
-        <ul class="reset-point">
+        <ul class="mail-tel__list reset-point point-position">
 
-          <li class="navigation list-andr">
+          <li class="navigation mail-tel__list-andr">
             <a href="mailto:info@example." class="reset-decoration mail">
               <svg class="pozition-logo" width="16" height="12">
                 <use href="./images/icons.svg#icon-convert"></use>
@@ -68,8 +69,9 @@
               info@devstudio.com</a>
           </li>
 
-          <li class="navigation list-andr">
+          <li class="navigation mail-tel__list-andr">
             <a href=":+380991111111" class="reset-decoration tel  ">
+
               <svg class="pozition-logo" width="10" height="16">
                 <use href="./images/icons.svg#icon-telefon"></use>
               </svg>
@@ -78,9 +80,8 @@
 
         </ul>
 
-
-
       </div>
+
 
     </div>
 
@@ -281,22 +282,22 @@
   <!--Подвал-->
   <footer class="footer">
     <!--Ссылка навигация -->
-    <div class="container block-too">
+    <div class="container footer__block-too">
 
       <div class="footer-box">
-        <a class="footer-logo logo reset-decoration" href="http://127.0.0.1:5500/">Web<span
-            class="logo-color-second">Studio</span></a>
+        <a class="footer__footer-logo   logo reset-decoration" href="http://127.0.0.1:5500/">Web<span
+            class="footer__logo-color-second">Studio</span></a>
         <address>
 
-          <ul class="footer-list">
-            <li class="footer-item"><a class="reset-decoration footer-link "
+          <ul class="footer__footer-list footer-wrap ">
+            <li class="footer-wrap__footer-item"><a class="footer-link reset-decoration "
                 href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265841,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=ru">г.
                 Киев, пр-т Леси Украинки, 26</a>
 
-            <li class="footer-item"><a class="reset-decoration  footer-link"
+            <li class="footer-wrap__footer-item"><a class=" footer-link  reset-decoration "
                 href="mailto:info@example.com">info@example.com</a></li>
 
-            <li class="footer-item"><a class="reset-decoration  footer-link" href="tel:+380991111111">+38
+            <li class="footer-wrap__footer-item"><a class=" footer-link  reset-decoration" href="tel:+380991111111">+38
                 099
                 111 11 11</a></li>
           </ul>
@@ -309,38 +310,40 @@
 
 
       <div class="footer-box-last">
-        <h4 class="paragraph-footer">присоединяйтесь</h4>
-        <ul class=" reset-point title-network">
-          <li class="title-network-list">
-            <a href="#" class="link-footer">
-              <svg class="title-network-icon" width="20px" height="20px">
+        <h4 class="footer-box-last__paragraph-footer">присоединяйтесь</h4>
+
+        <ul class="title-network reset-point ">
+
+          <li class="title-network__list-network">
+            <a href="#" class="title-network__link-footer">
+              <svg class="title-network__title-network-icon" width="20px" height="20px">
                 <use href="./images/icons.svg#icon-instagram "></use>
 
               </svg>
             </a>
           </li>
 
-          <li class="title-network-list">
-            <a href="#" class="link-footer">
-              <svg class="title-network-icon" width="20px" height="16.25px">
+          <li class="title-network__list-network">
+            <a href="#" class="title-network__link-footer">
+              <svg class="title-network__title-network-icon" width="20px" height="16.25px">
                 <use href="./images/icons.svg#icon-twitter"></use>
 
               </svg>
             </a>
           </li>
 
-          <li class="title-network-list">
-            <a href="#" class="link-footer">
-              <svg class="title-network-icon" width="20px" height="16px">
+          <li class="title-network__list-network">
+            <a href="#" class="title-network__link-footer">
+              <svg class="title-network__title-network-icon" width="20px" height="16px">
                 <use href="./images/icons.svg#icon-facebook "></use>
 
               </svg>
             </a>
           </li>
 
-          <li class="title-network-list">
-            <a href="#" class="link-footer">
-              <svg class="title-network-icon" width="20px" height="16px">
+          <li class="title-network__list-network">
+            <a href="#" class="title-network__link-footer">
+              <svg class="title-network__title-network-icon" width="20px" height="16px">
                 <use href="./images/icons.svg#icon-linkedin"></use>
 
               </svg>
@@ -348,27 +351,30 @@
           </li>
         </ul>
 
-
-
-
       </div>
 
 
+
+
       <div class="footer-box-third">
-
         <!-- форм нужно указывать обязательно что-бы данные пользователя были отправлены на сервер -->
-
         <form class="js-speactr-form">
+
           <label for="email" class="paragraph-footer-too">Подпишитесь на рассылку</label>
 
+          <div class="footer-box-third__footer-too-posotoion">
 
-          <div class="footer-too-posotoion">
-            <input class="entry-field" type="email" name="username" id="email" placeholder="Email" />
-            <button class="button-submit sudscride-button " type="submit">Подписаться <svg class="telegram" width="24px"
-                height="24px">
+            <input class="footer-box-third__entry-field footer-box-third--entry-field-child " type="email"
+              name="username" id="email" placeholder="Email" />
+
+            <button class="footer-box-third__button-submit footer-box-third--sudscride-button" type="submit">Подписаться
+
+              <svg class="footer-box-third__telegram" width="24px" height="24px">
                 <use href="./images/icons.svg#icon-icon-telegram"></use>
               </svg>
+
             </button>
+
           </div>
 
 

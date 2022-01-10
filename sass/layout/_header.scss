@@ -4,11 +4,12 @@
   margin: 0px;
 }
 
-.header-container {
+.sectin-start__header-container {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
+
 .nav {
   height: 80px;
   padding: 32px 0;
@@ -31,17 +32,18 @@
 }
 
 
-.logo-color {
+.nav__logo-color {
   color: $color-main;
 }
 
 
-.list-andr:not(:last-child) {
+.sectin-start__list-andr:not(:last-child),
+.mail-tel__list-andr:not(:last-child) {
   margin-right: 50px;
 }
 
 /* навигация */
-.list-link {
+.sectin-start__list-link {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -59,8 +61,7 @@
 }
 
 
-
-.active {
+.sectin-start__list-link--active {
   color: $color-accent;
   position: relative;
 
@@ -74,7 +75,6 @@
     background-color: $color-accent;
     left: 0px;
     bottom: -34px;
-
 }
 
 }
