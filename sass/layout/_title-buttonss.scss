@@ -1,15 +1,50 @@
 /* портфолио */
-.section-list-buttons {
+
+.section-buttons-mor {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.section-buttons-mor__section-list-buttons {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
 
-.lisr-buttons:not(last-child) {
+.section-buttons-mor__lisr-buttons:not(last-child) {
   margin-right: 8px;
   display: flex;
   justify-content: space-around;
 }
+
+.section-buttons-mor__btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $color-main;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: none;
+  justify-content: space-around;
+  transition: 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-accent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+      0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
 
 .establishment-cards {
   display: flex;
@@ -53,7 +88,6 @@
   cursor: pointer;
 }
 
-/* позиционируем  анимацию на ховере  */
 .text-cubmenu {
   position: absolute;
   top: 0px;
@@ -99,3 +133,4 @@
   color: $second-color;
   cursor: pointer;
 }
+

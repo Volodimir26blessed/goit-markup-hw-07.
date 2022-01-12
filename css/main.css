@@ -62,11 +62,6 @@ button {
   text-decoration: none;
 }
 
-.section-offset-bottom {
-  padding-bottom: 94px;
-  padding-top: 94px;
-}
-
 .list-wrap {
   padding: 30px;
   text-align: center;
@@ -407,7 +402,12 @@ address {
   fill: #2196f3;
 }
 
+.form-input:focus + .logo-register {
+  fill: #2196f3;
+}
+
 .form-input-text {
+  padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -420,16 +420,8 @@ address {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input-text:hover {
+.form-input-text:hover, .form-input-text:focus {
   border-color: #2196f3;
-}
-
-.form-input-text::placeholder {
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
-  padding: 12px 16px;
-  color: rgba(117, 117, 117, 0.5);
 }
 
 .button-form {
@@ -657,16 +649,43 @@ address {
 }
 
 /* портфолио */
-.section-list-buttons {
+.section-buttons-mor {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.section-buttons-mor__section-list-buttons {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
 
-.lisr-buttons:not(last-child) {
+.section-buttons-mor__lisr-buttons:not(last-child) {
   margin-right: 8px;
   display: flex;
   justify-content: space-around;
+}
+
+.section-buttons-mor__btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background: #f5f4fa;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: none;
+  justify-content: space-around;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-buttons-mor__btn:hover, .section-buttons-mor__btn:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .establishment-cards {
@@ -707,7 +726,6 @@ address {
   cursor: pointer;
 }
 
-/* позиционируем  анимацию на ховере  */
 .text-cubmenu {
   position: absolute;
   top: 0px;
@@ -912,28 +930,6 @@ body {
   letter-spacing: 0.03em;
   color: #212121;
   box-sizing: border-box;
-}
-
-.btn {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  background: #f5f4fa;
-  border-radius: 4px;
-  padding: 6px 22px;
-  border: none;
-  justify-content: space-around;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn:hover, .btn:focus {
-  color: #ffffff;
-  background-color: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .container {
