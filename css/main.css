@@ -709,24 +709,24 @@ address {
   margin-bottom: 0;
 }
 
-.link-cards:hover .text-cubmenu {
+.container-cards__link-cards:hover .text-cubmenu {
   transform: translateY(0);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.submenu {
+.container-cards__submenu {
   position: relative;
   overflow: hidden;
 }
 
-.card {
+.container-cards__card {
   display: block;
   min-width: 100%;
   height: auto;
   cursor: pointer;
 }
 
-.text-cubmenu {
+.container-cards--text-cubmenu {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -740,7 +740,7 @@ address {
   transform: translateY(101%);
 }
 
-.establishment-cards-wrap {
+.container-cards__establishment-cards-wrap {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -759,7 +759,7 @@ address {
   cursor: pointer;
 }
 
-.specification {
+.container-cards__specification {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
